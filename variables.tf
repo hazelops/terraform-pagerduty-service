@@ -1,3 +1,7 @@
+variable "pagerduty_token" {
+  default = "YOUR_API_KEY_HERE"
+}
+
 variable "service_name" {
   description = "Name of service. Make it meaningful"
 }
@@ -18,7 +22,7 @@ variable "alert_creation" {
 
 variable "service_integration_name" {
   description = "Name of service integration. Make it meaningful"
-  default = "Cloudwatch"
+  default     = "Cloudwatch"
 }
 
 variable "enabled" {

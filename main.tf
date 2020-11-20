@@ -8,8 +8,8 @@ resource "pagerduty_service" "pd_service" {
 }
 
 resource "pagerduty_service_integration" "pd_service_integration" {
-  count             = var.enabled ? 1 : 0
-  name              = data.pagerduty_vendor.pd_vendor[0].name
-  vendor            = data.pagerduty_vendor.pd_vendor[0].id
-  service           = pagerduty_service.pd_service[0].id
+  count   = var.enabled ? 1 : 0
+  name    = data.pagerduty_vendor.pd_vendor[0].name
+  vendor  = data.pagerduty_vendor.pd_vendor[0].id
+  service = pagerduty_service.pd_service[0].id
 }
