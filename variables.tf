@@ -31,21 +31,3 @@ variable "service_integration_name" {
   default     = "Cloudwatch"
 }
 
-variable "escalation_policy_name" {
-  description = "Name of escalation policy. Make it meaningful"
-}
-
-variable "num_loops" {
-  default = 2
-}
-
-variable "teams" {}
-
-variable "escalation_delay" {
-  default = 15
-}
-
-variable "target_schedule_01" {}
-
-variable "target_schedule_02" {}
-
