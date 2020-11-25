@@ -1,6 +1,4 @@
-variable "pagerduty_token" {
-  default = "YOUR_API_KEY_HERE"
-}
+variable "pagerduty_token" {}
 
 variable "enabled" {
   type        = bool
