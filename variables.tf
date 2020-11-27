@@ -15,7 +15,9 @@ variable "auto_resolve_timeout" {
   default = 14400
 }
 
-variable "escalation_policy" {}
+variable "escalation_policy" {
+  description = "The escalation policy used by this service."
+}
 
 variable "acknowledgement_timeout" {
   description = "Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the 'null' string."
