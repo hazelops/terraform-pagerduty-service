@@ -1,3 +1,3 @@
-data "pagerduty_vendor" "pd_vendor" {
+data "pagerduty_vendor" "this" {
   name = var.service_integration_name
 }

@@ -1,4 +1,4 @@
-resource "pagerduty_service" "pd_service" {
+resource "pagerduty_service" "this" {
   count                   = var.enabled ? 1 : 0
   name                    = var.service_name
   auto_resolve_timeout    = var.auto_resolve_timeout
@@ -7,9 +7,9 @@ resource "pagerduty_service" "pd_service" {
   alert_creation          = var.alert_creation
 }
 
-resource "pagerduty_service_integration" "pd_service_integration" {
+resource "pagerduty_service_integration" "this" {
   count   = var.enabled ? 1 : 0
-  name    = data.pagerduty_vendor.pd_vendor.name
-  vendor  = data.pagerduty_vendor.pd_vendor.id
-  service = pagerduty_service.pd_service[0].id
+  name    = data.pagerduty_vendor.this.name
+  vendor  = data.pagerduty_vendor.this.id
+  service = pagerduty_service.this[0].id
 }

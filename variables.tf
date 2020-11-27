@@ -11,6 +11,7 @@ variable "service_name" {
 }
 
 variable "auto_resolve_timeout" {
+  description = "Time in seconds that an incident is automatically resolved if left open for that long. Disabled if set to the 'null' string."
   default = 14400
 }
 
@@ -21,11 +22,12 @@ variable "acknowledgement_timeout" {
 }
 
 variable "alert_creation" {
+  description = "Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value 'create_incidents' is default: events will create an incident that cannot be merged. Value 'create_alerts_and_incidents' is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged."
   default = "create_alerts_and_incidents"
 }
 
 variable "service_integration_name" {
-  description = "Name of service integration. Make it meaningful"
+  description = "The name of the service integration (Datadog or Cloudwatch). This will be used in 'pagerduty_vendor'."
   default     = "Cloudwatch"
 }
 
