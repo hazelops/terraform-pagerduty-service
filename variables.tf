@@ -18,6 +18,7 @@ variable "auto_resolve_timeout" {
 variable "escalation_policy" {}
 
 variable "acknowledgement_timeout" {
+  description = "Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the 'null' string."
   default = 14400
 }
 
