@@ -1,5 +1,3 @@
-variable "pagerduty_token" {}
-
 variable "enabled" {
   type        = bool
   default     = true
