@@ -29,5 +29,5 @@ variable "alert_creation" {
 
 variable "service_integration_name" {
   description = "The name of the service integration (Datadog or Cloudwatch). This will be used in 'pagerduty_vendor'."
-  default     = "Cloudwatch"
+  default     = "Amazon CloudWatch"
 }
