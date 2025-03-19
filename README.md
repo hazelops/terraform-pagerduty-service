@@ -1,3 +1,6 @@
+# ⚠️This repository is not maintained⚠️
+# ⚠️This repository is outdated and deprecated⚠️
+
 # Terraform Pagerduty Service
 
 
